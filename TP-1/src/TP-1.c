@@ -1,0 +1,56 @@
+#include "TP-1.h"
+
+int main(void)
+{
+	setbuf(stdout, NULL);
+
+	int opcion;
+	int numUno;
+	int numDos;
+	int suma;
+	int resta;
+	int multi;
+
+	printf("Ingrese el primer numero para la operacion: ");
+	scanf("%d", &numUno);
+	printf("Ingrese el segundo numero para la operacion: ");
+	scanf("%d", &numDos);
+
+	do
+	{
+		printf("\nLos numeros ingresados son %d y %d, seleccione la operacion a realizar.\n",numUno, numDos);
+		printf("\n1. Suma\n");
+		printf("2. Resta\n");
+		printf("3. Division\n");
+		printf("4. Multiplicacion\n");
+		printf("5. Factorial\n");
+		printf("6. Salir\n");
+		printf("Elija opcion: ");
+		scanf("%d", &opcion);
+		switch (opcion) {
+		case 1:
+			suma = sumaNumeros(numUno, numDos);
+			printf("La suma de %d y %d es igual a: %d\n",numUno,numDos, suma);
+			break;
+		case 2:
+			resta = restaNumeros(numUno,numDos);
+			printf("La resta de %d y %d es igual a: %d\n",numUno,numDos, resta);
+			break;
+		case 3:
+			divisionNumeros(numUno, numDos);
+			break;
+		case 4:
+			multi= multiplicacionNumeros(numUno, numDos);
+			printf("La multiplicacion de %d y %d es igual a: %d\n",numUno,numDos, multi);
+			break;
+
+		case 5:
+			factorialNumeros(numUno,numDos);
+			break;
+
+		}
+	} while (opcion != 6);
+
+}
+
+//Gonzalo de Salvo
