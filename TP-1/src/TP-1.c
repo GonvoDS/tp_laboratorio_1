@@ -12,44 +12,74 @@ int main(void)
 	int suma;
 	int resta;
 	int multi;
+	int flag1=0;
+	int flag2=0;
 
-		printf("Ingrese el primer numero a cargar: ");
-		scanf("%d", &numUno);
-		printf("Ingrese el segundo numero a cargar: ");
-		scanf("%d", &numDos);
 	do
 	{
 		system("cls");
-		opcion=menuCalculadora(numUno,numDos);
+		opcion=menuCalculadora(numUno,numDos,flag1,flag2);
 
 		switch (opcion) {
 		case 1:
-			suma = sumaNumeros(numUno, numDos);
-			printf("La suma de %d y %d es igual a: %d\n",numUno,numDos, suma);
+			printf("Ingrese el nuevo numero a cargar: ");
+			scanf("%d", &numUno);
+			flag1++;
 			break;
 		case 2:
-			resta = restaNumeros(numUno,numDos);
-			printf("La resta de %d y %d es igual a: %d\n",numUno,numDos, resta);
+			printf("Ingrese el nuevo numero a cargar: ");
+			scanf("%d", &numDos);
+			flag2++;
 			break;
 		case 3:
-			divisionNumeros(numUno, numDos);
+			if(flag1==0 ||flag2==0){
+				printf("Por favor ingrese los dos operandos antes de hacer la operacion.\n");
+			}
+			else
+			{
+			suma = sumaNumeros(numUno, numDos);
+			printf("La suma de %d y %d es igual a: %d\n",numUno,numDos, suma);
+			}
 			break;
 		case 4:
-			multi= multiplicacionNumeros(numUno, numDos);
-			printf("La multiplicacion de %d y %d es igual a: %d\n",numUno,numDos, multi);
+			if(flag1==0 ||flag2==0)
+			{
+				printf("Por favor ingrese los dos operandos antes de hacer la operacion.\n");
+			}
+			else
+			{
+			resta = restaNumeros(numUno,numDos);
+			printf("La resta de %d y %d es igual a: %d\n",numUno,numDos, resta);
+			}
 			break;
 		case 5:
+			if(flag1==0 ||flag2==0){
+				printf("Por favor ingrese los dos operandos antes de hacer la operacion.\n");
+			}
+			else
+			{
+			divisionNumeros(numUno, numDos);
+			}
+			break;
+		case 6:
+			if(flag1==0 ||flag2==0){
+				printf("Por favor ingrese los dos operandos antes de hacer la operacion.\n");
+			}
+			else
+			{
+			multi= multiplicacionNumeros(numUno, numDos);
+			printf("La multiplicacion de %d y %d es igual a: %d\n",numUno,numDos, multi);
+			}
+			break;
+		case 7:
+			if(flag1==0 ||flag2==0){
+				printf("Por favor ingrese los dos operandos antes de hacer la operacion.\n");
+			}
+			else{
 			factUno=factorialNumeros(numUno);
 			factDos=factorialNumeros(numDos);
 			printf("El factorial del numero %d es %d mientras que el de %d es %d\n", numUno, factUno,numDos,factDos);
-			break;
-		case 6:
-			printf("Ingrese el nuevo numero a cargar: ");
-			scanf("%d", &numUno);
-			break;
-		case 7:
-			printf("Ingrese el nuevo numero a cargar: ");
-			scanf("%d", &numDos);
+			}
 			break;
 		case 8:
 			printf("Hasta luego!\n");
@@ -58,7 +88,6 @@ int main(void)
 		default:
 			printf("Numero invalido por favor ingrese una opcion correcta\n");
 			break;
-
 		}
 			system("pause");
 	} while (opcion != 8);

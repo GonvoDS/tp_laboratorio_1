@@ -1,25 +1,49 @@
 #include "TP-1.h"
 
-int menuCalculadora(int numeroUno, int numeroDos)
+int menuCalculadora(int numeroUno, int numeroDos, int flag1, int flag2)
 {
 	int opcion;
 
-	printf("\nNumero A = %d.\n",numeroUno);
-	printf("Numero B = %d.\n",numeroDos);
+	if(flag1==0&&flag2==0){
+		printf("\nNumero A = X\n");
+		printf("Numero B = Y\n");
+	}
+	else
+	{
+		if(flag1>=1&&flag2==0)
+		{
+			printf("\nNumero A = %d.\n",numeroUno);
+			printf("Numero B = Y\n");
+
+		}
+		else
+		{
+			if(flag1==0&&flag2>=1)
+			{
+						printf("\nNumero A = X\n");
+						printf("Numero B = %d.\n",numeroDos);
+			}
+			else{
+				printf("\nNumero A = %d.\n",numeroUno);
+				printf("Numero B = %d.\n",numeroDos);
+			}
+		}
+	}
 	printf("Menu de opciones: ");
-	printf("\n1. Suma\n");
-	printf("2. Resta\n");
-	printf("3. Division\n");
-	printf("4. Multiplicacion\n");
-	printf("5. Factorial\n");
-	printf("6. Reingresar primer numero\n");
-	printf("7. Reingresar segundo numero\n");
+	printf("\n1. Ingresar primero operando.\n");
+	printf("2. Ingresar segundo operando.\n");
+	printf("3. Suma.\n");
+	printf("4. Resta.\n");
+	printf("5. Division.\n");
+	printf("6. Multiplicacion.\n");
+	printf("7. Factorial.\n");
 	printf("8. Salir\n");
 	printf("Elija opcion: ");
 	scanf("%d", &opcion);
 
 	return opcion;
 }
+
 
 
 int sumaNumeros(int numeroUno, int numeroDos)

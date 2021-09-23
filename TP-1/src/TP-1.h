@@ -7,7 +7,7 @@
 
 int sumaNumeros(int numeroUno, int numeroDos);
 int restaNumeros(int numeroUno, int numeroDos);
-int menuCalculadora(int numeroUno, int numeroDos);
+int menuCalculadora(int numeroUno, int numeroDos, int flag1, int flag2);
 int multiplicacionNumeros(int numeroUno, int numeroDos);
 void divisionNumeros(int numeroUno, int numeroDos);
 int factorialNumeros(int numero);
