@@ -2,8 +2,16 @@
 #ifndef TP_1_H_
 #define TP_1_H_
 
+
 #include <stdio.h>
 #include <stdlib.h>
+/// \fn int sumaNumeros(int, int)
+/// \brief
+/// \pre
+/// \post
+/// \param numeroUno
+/// \param numeroDos
+/// \return
 
 int sumaNumeros(int numeroUno, int numeroDos);
 int restaNumeros(int numeroUno, int numeroDos);

@@ -4,7 +4,8 @@ int menuCalculadora(int numeroUno, int numeroDos, int flag1, int flag2)
 {
 	int opcion;
 
-	if(flag1==0&&flag2==0){
+	if(flag1==0&&flag2==0)
+	{
 		printf("\nNumero A = X\n");
 		printf("Numero B = Y\n");
 	}
@@ -93,18 +94,12 @@ int factorialNumeros(int numero)
 	int a;
 	int factorial = 1;
 
-	if(numero>1){
+	if(numero>1)
+	{
 	for (a = numero; a > 1; a--)
 	{
 		factorial = factorial * a;
 	}
-	}
-	else
-	{
-		for (a = numero; a < -1; a++)
-		{
-			factorial = factorial * a;
-		}
 	}
 
 	return factorial;

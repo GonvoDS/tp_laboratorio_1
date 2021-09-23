@@ -92,7 +92,25 @@ int main(void)
 			else{
 			factUno=factorialNumeros(numUno);
 			factDos=factorialNumeros(numDos);
-			printf("El factorial del numero %d es %d mientras que el de %d es %d\n", numUno, factUno,numDos,factDos);
+			if(numUno<0 && numDos<0){
+				printf("No es posible realizar el factorial de numeros negativos. \n");
+			}
+			else{
+				if(numUno<0 && numDos>0){
+					printf("El factorial del numero %d no es posile de realizar por ser negativo mientras que el de %d es %d\n",numUno, numDos, factDos);
+				}
+				else
+				{
+					if(numUno>0 && numDos<0)
+					{
+						printf("El factorial del numero %d es %d mientras que el de %d no es posile de realizar por ser negativo.\n",numUno, factUno, numDos);
+					}
+					else{
+						printf("El factorial del numero %d no es posile de realizar por ser negativo mientras que el de %d es %d\n",numUno, numDos, factDos);
+					}
+				}
+
+			}
 			}
 			break;
 		case 8:
