@@ -43,39 +43,26 @@ int multiplicacionNumeros(int numeroUno, int numeroDos)
 
 	return multi;
 }
-void factorialNumeros(int numeroUno, int numeroDos)
+int factorialNumeros(int numero)
 {
-	int a, b;
-	int factorialX = 1;
-	int factorialZ = 1;
-	if(numeroUno>1){
-	for (a = numeroUno; a > 1; a--)
+	int a;
+	int factorial = 1;
+
+	if(numero>1){
+	for (a = numero; a > 1; a--)
 	{
-		factorialX = factorialX * a;
+		factorial = factorial * a;
 	}
 	}
 	else
 	{
-		for (a = numeroUno; a < -1; a++)
+		for (a = numero; a < -1; a++)
 		{
-			factorialX = factorialX * a;
-		}
-	}
-	if(numeroDos>1){
-	for (b = numeroDos; b > 1; b--)
-	{
-		factorialZ = factorialZ * b;
-	}
-	}
-	else
-	{
-		for (b = numeroDos; b < -1; b++)
-		{
-			factorialZ = factorialZ * b;
+			factorial = factorial * a;
 		}
 	}
 
-	printf("El factorial del numero %d es igual a %d, mientras que el del numero %d es igual a %d",numeroUno, factorialX, numeroDos, factorialZ);
+	return factorial;
 
 }
 

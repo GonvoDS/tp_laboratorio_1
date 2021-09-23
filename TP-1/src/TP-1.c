@@ -7,6 +7,8 @@ int main(void)
 	int opcion;
 	int numUno;
 	int numDos;
+	int factUno;
+	int factDos;
 	int suma;
 	int resta;
 	int multi;
@@ -19,6 +21,7 @@ int main(void)
 	{
 		printf("\nNumero A = %d.\n",numUno);
 		printf("Numero B = %d.\n",numDos);
+		printf("Menu de opciones: ");
 		printf("\n1. Suma\n");
 		printf("2. Resta\n");
 		printf("3. Division\n");
@@ -46,7 +49,9 @@ int main(void)
 			printf("La multiplicacion de %d y %d es igual a: %d\n",numUno,numDos, multi);
 			break;
 		case 5:
-			factorialNumeros(numUno,numDos);
+			factUno=factorialNumeros(numUno);
+			factDos=factorialNumeros(numDos);
+			printf("El factorial del numero %d es %d mientras que el de %d es %d", numUno, factUno,numDos,factDos);
 			break;
 		case 6:
 			printf("Ingrese el primer numero a cargar: ");
