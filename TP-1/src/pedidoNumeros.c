@@ -1,11 +1,32 @@
 #include "TP-1.h"
 
+int menuCalculadora(int numeroUno, int numeroDos)
+{
+	int opcion;
 
-int sumaNumeros(int NumeroUno, int numeroDos)
+	printf("\nNumero A = %d.\n",numeroUno);
+	printf("Numero B = %d.\n",numeroDos);
+	printf("Menu de opciones: ");
+	printf("\n1. Suma\n");
+	printf("2. Resta\n");
+	printf("3. Division\n");
+	printf("4. Multiplicacion\n");
+	printf("5. Factorial\n");
+	printf("6. Reingresar primer numero\n");
+	printf("7. Reingresar segundo numero\n");
+	printf("8. Salir\n");
+	printf("Elija opcion: ");
+	scanf("%d", &opcion);
+
+	return opcion;
+}
+
+
+int sumaNumeros(int numeroUno, int numeroDos)
 {
 	int suma;
 
-	suma = NumeroUno + numeroDos;
+	suma = numeroUno + numeroDos;
 	return suma;
 }
 int restaNumeros(int numeroUno, int numeroDos)
@@ -25,7 +46,7 @@ void divisionNumeros(int numeroUno, int numeroDos)
 	if (numeroDos != 0)
 	{
 		division = numeroUno / (float) numeroDos;
-		printf("La division entre %d y %d es igual a: %.2f", numeroUno,
+		printf("La division entre %d y %d es igual a: %.2f\n", numeroUno,
 				numeroDos, division);
 	} else {
 		printf("No es posible realizar una division por 0\n");

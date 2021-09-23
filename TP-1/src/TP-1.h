@@ -5,11 +5,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sumaNumeros(int x, int z);
-int restaNumeros(int x, int z);
-
-int multiplicacionNumeros(int x, int z);
-void divisionNumeros(int x, int z);
+int sumaNumeros(int numeroUno, int numeroDos);
+int restaNumeros(int numeroUno, int numeroDos);
+int menuCalculadora(int numeroUno, int numeroDos);
+int multiplicacionNumeros(int numeroUno, int numeroDos);
+void divisionNumeros(int numeroUno, int numeroDos);
 int factorialNumeros(int numero);
 
 #endif /* TP_1_H_ */

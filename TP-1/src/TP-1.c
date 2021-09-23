@@ -19,19 +19,9 @@ int main(void)
 		scanf("%d", &numDos);
 	do
 	{
-		printf("\nNumero A = %d.\n",numUno);
-		printf("Numero B = %d.\n",numDos);
-		printf("Menu de opciones: ");
-		printf("\n1. Suma\n");
-		printf("2. Resta\n");
-		printf("3. Division\n");
-		printf("4. Multiplicacion\n");
-		printf("5. Factorial\n");
-		printf("6. Reingresar primer numero\n");
-		printf("7. Reingresar segundo numero\n");
-		printf("8. Salir\n");
-		printf("Elija opcion: ");
-		scanf("%d", &opcion);
+		system("cls");
+		opcion=menuCalculadora(numUno,numDos);
+
 		switch (opcion) {
 		case 1:
 			suma = sumaNumeros(numUno, numDos);
@@ -51,17 +41,26 @@ int main(void)
 		case 5:
 			factUno=factorialNumeros(numUno);
 			factDos=factorialNumeros(numDos);
-			printf("El factorial del numero %d es %d mientras que el de %d es %d", numUno, factUno,numDos,factDos);
+			printf("El factorial del numero %d es %d mientras que el de %d es %d\n", numUno, factUno,numDos,factDos);
 			break;
 		case 6:
-			printf("Ingrese el primer numero a cargar: ");
+			printf("Ingrese el nuevo numero a cargar: ");
 			scanf("%d", &numUno);
 			break;
 		case 7:
-			printf("Ingrese el segundo numero a cargar: ");
+			printf("Ingrese el nuevo numero a cargar: ");
 			scanf("%d", &numDos);
 			break;
+		case 8:
+			printf("Hasta luego!\n");
+			opcion=8;
+			break;
+		default:
+			printf("Numero invalido por favor ingrese una opcion correcta\n");
+			break;
+
 		}
+			system("pause");
 	} while (opcion != 8);
 
 }
