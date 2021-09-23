@@ -1,26 +1,5 @@
 #include "TP-1.h"
 
-int pedidoNumUno(int numeroUno)
-{
-	int numUno;
-
-	printf("Ingrese el primer numero a cargar: ");
-	scanf("%d", &numUno);
-
-	return numUno;
-
-}
-
-int pedidoNumDos(int numeroDos)
-{
-	int numDos;
-
-	printf("Ingrese el segundo numero a cargar: ");
-	scanf("%d", &numDos);
-
-	return numDos;
-
-}
 
 int sumaNumeros(int NumeroUno, int numeroDos)
 {

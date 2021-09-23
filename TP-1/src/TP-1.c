@@ -5,17 +5,16 @@ int main(void)
 	setbuf(stdout, NULL);
 
 	int opcion;
-	int pedidoUno;
-	int pedidoDos;
 	int numUno;
 	int numDos;
 	int suma;
 	int resta;
 	int multi;
 
-	numUno=pedidoNumUno(pedidoUno);
-	numDos=pedidoNumDos(pedidoDos);
-
+		printf("Ingrese el primer numero a cargar: ");
+		scanf("%d", &numUno);
+		printf("Ingrese el segundo numero a cargar: ");
+		scanf("%d", &numDos);
 	do
 	{
 		printf("\nNumero A = %d.\n",numUno);
@@ -50,10 +49,12 @@ int main(void)
 			factorialNumeros(numUno,numDos);
 			break;
 		case 6:
-			numUno=pedidoNumUno(pedidoUno);
+			printf("Ingrese el primer numero a cargar: ");
+			scanf("%d", &numUno);
 			break;
 		case 7:
-			numDos=pedidoNumDos(pedidoDos);
+			printf("Ingrese el segundo numero a cargar: ");
+			scanf("%d", &numDos);
 			break;
 		}
 	} while (opcion != 8);
