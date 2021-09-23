@@ -22,14 +22,28 @@ int main(void)
 
 		switch (opcion) {
 		case 1:
-			printf("Ingrese el nuevo numero a cargar: ");
+			if(flag1==0){
+			printf("Ingrese el primer operando a cargar: ");
 			scanf("%d", &numUno);
 			flag1++;
+			}
+			else
+			{
+				printf("Reingrese el primer operando a cargar: ");
+				scanf("%d", &numUno);
+			}
 			break;
 		case 2:
-			printf("Ingrese el nuevo numero a cargar: ");
+			if(flag2==0){
+			printf("Ingrese el segundo operando a cargar: ");
 			scanf("%d", &numDos);
 			flag2++;
+			}
+			else
+			{
+				printf("Reingrese el segundo operando a cargar: ");
+				scanf("%d", &numDos);
+			}
 			break;
 		case 3:
 			if(flag1==0 ||flag2==0){
