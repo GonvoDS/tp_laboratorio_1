@@ -5,26 +5,29 @@ int main(void)
 	setbuf(stdout, NULL);
 
 	int opcion;
+	int pedidoUno;
+	int pedidoDos;
 	int numUno;
 	int numDos;
 	int suma;
 	int resta;
 	int multi;
 
-	printf("Ingrese el primer numero para la operacion: ");
-	scanf("%d", &numUno);
-	printf("Ingrese el segundo numero para la operacion: ");
-	scanf("%d", &numDos);
+	numUno=pedidoNumUno(pedidoUno);
+	numDos=pedidoNumDos(pedidoDos);
 
 	do
 	{
-		printf("\nLos numeros ingresados son %d y %d, seleccione la operacion a realizar.\n",numUno, numDos);
+		printf("\nNumero A = %d.\n",numUno);
+		printf("Numero B = %d.\n",numDos);
 		printf("\n1. Suma\n");
 		printf("2. Resta\n");
 		printf("3. Division\n");
 		printf("4. Multiplicacion\n");
 		printf("5. Factorial\n");
-		printf("6. Salir\n");
+		printf("6. Reingresar primer numero\n");
+		printf("7. Reingresar segundo numero\n");
+		printf("8. Salir\n");
 		printf("Elija opcion: ");
 		scanf("%d", &opcion);
 		switch (opcion) {
@@ -43,13 +46,17 @@ int main(void)
 			multi= multiplicacionNumeros(numUno, numDos);
 			printf("La multiplicacion de %d y %d es igual a: %d\n",numUno,numDos, multi);
 			break;
-
 		case 5:
 			factorialNumeros(numUno,numDos);
 			break;
-
+		case 6:
+			numUno=pedidoNumUno(pedidoUno);
+			break;
+		case 7:
+			numDos=pedidoNumDos(pedidoDos);
+			break;
 		}
-	} while (opcion != 6);
+	} while (opcion != 8);
 
 }
 

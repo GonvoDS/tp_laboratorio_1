@@ -12,4 +12,6 @@ void factorialNumeros(int x, int z);
 int multiplicacionNumeros(int x, int z);
 void divisionNumeros(int x, int z);
 void factorialNumeros(int x, int z);
+int pedidoNumUno(int x);
+int pedidoNumDos(int z);
 #endif /* TP_1_H_ */
