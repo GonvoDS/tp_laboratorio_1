@@ -126,8 +126,8 @@ int sortEmployees(Employee* list, int len, int order)
  Employee auxEmployee;
  if(list!=NULL&&len>0)
 {
-    for(int i=0; i<len-1; i++){
-			for(int j=i+1; j<len; j++){
+    for(int i=0; i<len; i++){
+			for(int j=0; j<len; j++){
 
 				if(order==1 && list[i].isEmpty==0 && ((strcmp(list[i].lastName,list[j].lastName)<0)  || (strcmp(list[i].lastName,list[j].lastName)==0 && list[i].sector > list[j].sector))){
 					auxEmployee = list[i];
