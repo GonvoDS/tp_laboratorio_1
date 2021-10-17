@@ -96,9 +96,9 @@ int removeEmployee(Employee* list, int len, int id)
             printf("No existe una persona con id %d\n",id);
         }
         else{
-            mostrarEmpleado(list[indice],len);
             printf("  Id     |Nombre         |Apellido    |Salario    |Sector\n");
             printf("------------------------------------------------------------\n");
+            mostrarEmpleado(list[indice],len);
             printf("Confirma baja?(s/n): ");
             fflush(stdin);
             scanf("%c", &confirma);

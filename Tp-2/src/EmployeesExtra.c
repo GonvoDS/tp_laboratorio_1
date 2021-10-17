@@ -104,9 +104,9 @@ int modificarEmployee(Employee* list, int tam)
             printf("No existe un empleado con id %d\n",id);
         }
         else{
-            mostrarEmpleado(list[indice],tam);
             printf("  Id     |Nombre         |Apellido    |Salario    |Sector\n");
             printf("------------------------------------------------------------\n");
+            mostrarEmpleado(list[indice],tam);
             printf("Desea modificar este empleado?(s/n): ");
             fflush(stdin);
             scanf("%c", &confirma);
