@@ -20,8 +20,7 @@ int menu()
     printf("3)Modificar datos de un empleado.\n");
     printf("4)Acceder a informes.\n");
     printf("5)Salir.\n");
-    printf("Ingrese una opcion: ");
-    scanf("%d",&opcion);
+    opcion=getInt("Ingrese una opcion: ",1,5);
 
     return opcion;
 }
@@ -98,7 +97,8 @@ int modificarEmployee(Employee* list, int tam)
         system("cls");
         printf("    ***Modificar empleado***    \n");
         printf("---------------------------------\n");
-        id= getInt("Ingrese id del empleado: ",1,1000);
+        printEmployees(list,tam);
+        id= getInt("Ingrese id del empleado a modificar: ",1,1000);
         indice=findEmployeeById(list,tam,id);
         if(indice==-1){
             printf("No existe un empleado con id %d\n",id);
@@ -129,13 +129,13 @@ int modificarEmployee(Employee* list, int tam)
                     strcpy(list[indice].lastName,auxLastName);
                     break;
                 case 3:
-                    getValidFloat("Ingrese un nuevo salario: ","Dato invalido. Ingrese nuevamente el salario");
-                    scanf("%f",&auxSalary);
+                	auxSalary=getValidFloat("Ingrese un nuevo salario: ","Dato invalido. Ingrese nuevamente el salario");
+
                     list[indice].salary=auxSalary;
                     break;
                 case 4:
-                    getValidInt("Ingrese un nuevo sector: ","Dato invalido. Ingrese nuevamente el sector");
-                    scanf("%d", &auxSector);
+                	auxSector=getValidInt("Ingrese un nuevo sector: ","Dato invalido. Ingrese nuevamente el sector");
+
                     list[indice].sector = auxSector;
                     break;
                 case 5:

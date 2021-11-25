@@ -48,6 +48,7 @@ int main()
             system("cls");
             printf("    ***Baja persona***  \n");
             printf("------------------------\n");
+            printEmployees(listaEmpleados,TAM);
             id=getInt("Ingrese el id del empleado a buscar: ",1,1000);
             verificar=removeEmployee(listaEmpleados,TAM,id);
             if(verificar==0)
@@ -64,6 +65,7 @@ int main()
         case 3:
         if(flagCarga==1)
         {
+
             verificar=modificarEmployee(listaEmpleados,TAM);
             if(verificar==1)
             {
@@ -138,8 +140,6 @@ int main()
             printf("Gracias por utilizar el programa!\n");
             seguir='n';
         break;
-        default:
-            printf("Opcion invalida, ingrese una correcta\n");
        }
        system("pause");
 
